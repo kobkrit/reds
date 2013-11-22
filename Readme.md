@@ -1,16 +1,13 @@
-# reds
-
-  reds is a light-weight Redis search for node.js. This module was originally developed to provide search capabilities for [Kue](http://learnboost.github.com/kue) a priority job queue, however it is very much a light general purpose search library that could be integrated into a blog, a documentation server, etc.
-
 # redsip (reds-index-prefix)
 
-  This project was forked from reds (https://github.com/visionmedia/reds).
+  This project was forked from reds, a light-weight Redis search for node.js (https://github.com/visionmedia/reds).
 
   Originally, the reds does not index the prefix of words.
   The articles that have word `tomato` can not be found by search query `tom`.
-  Users need to input the full query "tomato" to found them.
+  Users need to input the full query `tomato` to found them.
 
   This project aimed to solve this constraint.
+  Users can query articles that contains word `tomato` by using search query `tom`.
   It is more suitable for mobile web application, or mobile application that is hard to type a full word
 
 ## Installation
