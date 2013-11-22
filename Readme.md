@@ -7,7 +7,7 @@
   This project was forked from reds (https://github.com/visionmedia/reds).
 
   Originally, the reds does not index the prefix of words.
-  The articles that have word "tomato" can not be found by search query "tom".
+  The articles that have word `tomato` can not be found by search query `tom`.
   Users need to input the full query "tomato" to found them.
 
   This project aimed to solve this constraint.
@@ -33,7 +33,7 @@ strs.push('Loki is really fat');
 strs.push('Loki, Jane, and Tobi are ferrets');
 strs.push('Manny is a cat');
 strs.push('Luna is a cat');
-strs.push('Mustachio is a cat');
+strs.push('Mustachio is the Ferrari');
 
 strs.forEach(function(str, i){ search.index(str, i); });
 ```
@@ -42,7 +42,7 @@ strs.forEach(function(str, i){ search.index(str, i); });
 
 ```js
 search
-  .query(query = 'Tobi dollars')
+  .query(query = 'fer')
   .end(function(err, ids){
     if (err) throw err;
     console.log('Search results for "%s":', query);
@@ -51,12 +51,31 @@ search
     });
     process.exit();
   });
-  ```
-
- By default redsip performs an intersection of the search words, the previous example would yield the following output:
+```
 
 ```
-Search results for "Tobi dollars":
+Search results for "fer":
+  - Loki, Jane, and Tobi are ferrets
+  - Mustachio is the Ferrari
+```
+
+ By default redsip performs an intersection of the search words, the following example would yield the following output:
+
+```js
+search
+  .query(query = 'tobi dollars')
+  .end(function(err, ids){
+    if (err) throw err;
+    console.log('Search results for "%s":', query);
+    ids.forEach(function(id){
+      console.log('  - %s', strs[id]);
+    });
+    process.exit();
+  });
+```
+
+```
+Search results for "tobi dollars":
   - Tobi wants four dollars
 ```
 
