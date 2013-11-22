@@ -152,8 +152,10 @@ search.query('foo bar').end(function(err, ids){});
     tobi wants four dollars
 
 ## Benchmarks
+ A tiny body of text is currently indexed in ~__13ms__, or __76__ ops/s.
 
  A small 1.6kb body of text is currently indexed in ~__60ms__, or __16__ ops/s (x10 slower than original reds).
+
  Medium bodies such as 40kb operate around __6__ ops/s, or __166ms__ (equal with the original reds).
 
 ## License 

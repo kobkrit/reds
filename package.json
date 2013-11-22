@@ -1,6 +1,6 @@
 {
     "name": "redsip",
-    "version": "0.2.4a",
+    "version": "0.2.5",
     "description": "Redis search (with word prefix) for node.js",
     "keywords": [
         "redis",

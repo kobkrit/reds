@@ -53,20 +53,27 @@ console.log('   small: %dkb', (small.length / 1024).toFixed(2));
 console.log('  medium: %dkb', (medium.length / 1024).toFixed(2));
 console.log('   large: %dmb', (large.length / 1024 / 1024).toFixed(2));
 
-//suite.bench('index() tiny', function(next){
-//  reds.index(tiny, 0, next);
-//});
+suite.bench('index() tiny', function(next){
+  reds.index(tiny, 0, next);
+});
 
 //suite.bench('index() small', function(next){
 //   reds.index(small, 0, next);
 //});
 
-suite.bench('index() medium', function(next){
-   reds.index(medium, 1, next);
-});
+//suite.bench('index() medium', function(next){
+//   reds.index(medium, 1, next);
+//});
 
 //suite.bench('index() large', function(next){
 //   reds.index(large, 2, next);
+//});
+//
+//suite.bench('query()', function(next){
+//    reds.query(query="kobkrit").end(function(err, founds){
+//        console.log(founds);
+//        next();
+//    });
 //});
 
 suite.run();
