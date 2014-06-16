@@ -1,6 +1,6 @@
 {
     "name": "redsip",
-    "version": "0.2.5",
+    "version": "0.2.6",
     "description": "Redis search (with word prefix) for node.js",
     "keywords": [
         "redis",
@@ -11,8 +11,8 @@
     ],
     "author": "Kobkrit Viriyayudhakorn <kobkrit@iapp.co.th>",
     "dependencies": {
-        "natural": "0.1.17",
-        "redis": "0.7.2"
+        "natural": "latest",
+        "redis": "latest"
     },
     "devDependencies": {
         "should": "*",

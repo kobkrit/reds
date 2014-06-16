@@ -14,8 +14,8 @@ var start = new Date;
 reds.version.should.match(/^\d+\.\d+\.\d+$/);
 
 reds
-  .words('foo bar baz ')
-  .should.eql(['foo', 'bar', 'baz']);
+  .words('foo bar baz สวัสดีครับ')
+  .should.eql(['foo', 'bar', 'baz', 'สวัสดีครับ']);
 
 reds
   .words(' Punctuation and whitespace; should be, handled.')
@@ -37,14 +37,14 @@ reds
 reds
   .metaphoneMap(['foo', 'bar', 'baz'])
   .should.eql({
-      foo: 'F'
-    , bar: 'BR'
-    , baz: 'BS'
+      foo: 'foo'
+    , bar: 'bar'
+    , baz: 'baz'
   });
 
 reds
   .metaphoneArray(['foo', 'bar', 'baz'])
-  .should.eql(['F', 'BR', 'BS'])
+  .should.eql(['foo', 'bar', 'baz'])
 
 reds
   .metaphoneKeys('reds', ['foo', 'bar', 'baz'])
